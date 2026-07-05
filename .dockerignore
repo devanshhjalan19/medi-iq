@@ -1,0 +1,17 @@
+# Keep the build context small and fast — only backend/ is actually needed.
+frontend/
+.git/
+.claude/
+*.md
+Start Medi-IQ.bat
+
+# Never send local secrets/state into the build context.
+backend/.venv/
+backend/.env
+backend/data/
+backend/.data_storage/
+backend/.cognee_system/
+backend/__pycache__/
+**/__pycache__/
+*.pyc
+*.log
