@@ -1,0 +1,89 @@
+.guardian-panel { border-color: var(--line-soft); }
+
+.guardian-shield { font-size: 14px; }
+
+.guardian-form {
+  display: flex;
+  gap: 8px;
+}
+.guardian-form .input { flex: 1; }
+.guardian-form .btn { flex: none; padding-left: 18px; padding-right: 18px; }
+
+.guardian-result {
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 11px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  animation: guardian-pop 0.18s ease;
+}
+@keyframes guardian-pop {
+  from { opacity: 0; transform: translateY(-3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.risk-danger {
+  border-color: rgba(228, 103, 79, 0.5);
+  background: linear-gradient(180deg, rgba(228, 103, 79, 0.09), rgba(228, 103, 79, 0.02));
+  box-shadow: 0 4px 22px rgba(228, 103, 79, 0.12);
+}
+.risk-caution {
+  border-color: rgba(232, 163, 61, 0.5);
+  background: linear-gradient(180deg, rgba(232, 163, 61, 0.1), rgba(232, 163, 61, 0.02));
+}
+.risk-none {
+  border-color: rgba(47, 143, 107, 0.4);
+  background: linear-gradient(180deg, rgba(47, 143, 107, 0.08), rgba(47, 143, 107, 0.01));
+}
+
+.guardian-risk-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.guardian-risk-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 11px;
+  border-radius: 8px;
+}
+.risk-danger .guardian-risk-badge { background: var(--danger); color: #fff7f5; }
+.risk-caution .guardian-risk-badge { background: var(--caution); color: #2b1c02; }
+.risk-none .guardian-risk-badge { background: var(--safe); color: #f2fbf7; }
+
+.guardian-risk-glyph { font-size: 13px; }
+.guardian-drug { font-size: 12.5px; color: var(--text-dim); }
+.guardian-clear {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: var(--text-faint);
+  font-size: 12px;
+  font-family: var(--font-mono);
+}
+.guardian-clear:hover { color: var(--ink); }
+
+.guardian-reason {
+  margin: 10px 0 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--text);
+}
+.guardian-trace {
+  margin: 10px 0 0;
+  font-size: 11px;
+  color: var(--danger-deep);
+  letter-spacing: 0.03em;
+}
+
+/* danger pulse on the whole graph frame */
+.graph-wrap.graph-danger {
+  border-color: rgba(228, 103, 79, 0.55);
+  box-shadow: inset 0 0 60px rgba(228, 103, 79, 0.07), var(--shadow-soft);
+}

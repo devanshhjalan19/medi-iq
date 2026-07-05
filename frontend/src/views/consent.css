@@ -1,0 +1,112 @@
+.btn-sm {
+  padding: 7px 13px;
+  font-size: 12.5px;
+  border-radius: 8px;
+}
+
+.access-status {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line-soft);
+}
+
+.hint-panel { background: var(--surface); }
+
+/* Register-new-patient divider on the entry form */
+.entry-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 16px 0;
+  color: var(--text-faint);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.entry-divider::before,
+.entry-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line-soft);
+}
+
+/* Freshly-registered patient's code callout */
+.new-code-callout {
+  margin-bottom: 14px;
+  padding: 14px;
+  border-radius: 11px;
+  border: 1px solid rgba(42, 106, 100, 0.35);
+  background: linear-gradient(180deg, var(--accent-wash), transparent);
+}
+.new-code-label {
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--thread);
+}
+.new-code-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 8px;
+}
+.new-code-value {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--ink);
+}
+.new-code-hint {
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.55;
+}
+
+/* Consent panel */
+.consent-panel { padding: 18px; }
+.consent-live {
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--safe);
+}
+
+.consent-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 11px;
+  border: 1px solid var(--line-soft);
+  margin-top: 10px;
+  background: var(--bg);
+}
+.consent-pending {
+  border-color: rgba(232, 163, 61, 0.4);
+  background: linear-gradient(180deg, rgba(232, 163, 61, 0.08), transparent);
+}
+.consent-active {
+  border-color: rgba(47, 143, 107, 0.35);
+  background: linear-gradient(180deg, rgba(47, 143, 107, 0.06), transparent);
+}
+.consent-past { opacity: 0.6; }
+
+.consent-row-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.consent-doctor { font-size: 13.5px; font-weight: 600; color: var(--ink); }
+.consent-meta { font-size: 11.5px; color: var(--text-dim); margin-top: 1px; }
+.consent-actions { display: flex; gap: 7px; flex: none; }
+
+@media (max-width: 460px) {
+  .consent-row { flex-direction: column; align-items: stretch; }
+  .consent-actions { justify-content: stretch; }
+  .consent-actions .btn { flex: 1; }
+}

@@ -1,0 +1,115 @@
+.upload-panel { display: flex; flex-direction: column; }
+
+.upload-tabs {
+  display: flex;
+  gap: 6px;
+  margin-top: 4px;
+  margin-bottom: 14px;
+  padding: 3px;
+  background: var(--raised);
+  border: 1px solid var(--line-soft);
+  border-radius: 10px;
+}
+.upload-tab {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 7px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-dim);
+  transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+.upload-tab.is-active {
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow-soft);
+}
+
+.upload-form { display: flex; flex-direction: column; gap: 12px; }
+
+.upload-textarea {
+  resize: vertical;
+  min-height: 92px;
+  line-height: 1.5;
+}
+
+.upload-file-drop {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 14px;
+  border: 1.5px dashed var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--text-dim);
+  font-size: 13px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.upload-file-drop:hover { border-color: var(--accent-soft); background: var(--accent-wash); }
+.upload-file-drop input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+.upload-file-icon {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: var(--accent-wash);
+  color: var(--thread);
+  font-size: 15px;
+}
+.upload-file-text { color: var(--text); }
+
+.upload-submit { width: 100%; }
+
+.upload-wait-hint {
+  margin: -2px 0 0;
+  font-size: 12px;
+  color: var(--text-faint);
+  line-height: 1.5;
+}
+.upload-error {
+  margin: -2px 0 0;
+  font-size: 12.5px;
+  color: var(--danger-deep);
+  line-height: 1.5;
+}
+
+.upload-history {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line-soft);
+}
+.upload-history-label {
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 8px;
+}
+.upload-history-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 7px 0;
+  font-size: 12.5px;
+  color: var(--text);
+  border-top: 1px solid var(--line-soft);
+}
+.upload-history-row:first-of-type { border-top: none; }
+.upload-history-icon { flex: none; font-size: 13px; }
+.upload-history-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
